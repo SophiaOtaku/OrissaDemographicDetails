@@ -1,0 +1,57 @@
+<script
+  src="http://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+
+
+function(e) {
+  if (!self.voted) {
+    var $btn = $(this),
+      $form = $btn.closest("form"),
+      url = $form.attr("action"),
+      formDataArray = $form.serializeArray(),
+      data = {},
+      i, l;
+    $btns.attr("disabled", "disabled");
+    $form.addClass("busy");
+    for (i = 0, l = formDataArray.length; i < l; i++) {
+      data[formDataArray[i].name] = formDataArray[i].value
+    }
+    data[$btn.attr("name")] = $btn.val();
+    $.ajax({
+      url: url,
+      type: "POST",
+      data: data,
+      dataType: "json",
+      success: function(response) {
+        if (response.survey) {
+          self.showSurvey(response.survey, $form.parent())
+        }
+        if (response.message) {
+          self.showMessage(response.message, $btn, $form)
+        }
+        $btn.addClass("active");
+        $btns.removeAttr("disabled");
+        $form.removeClass("busy");
+        self.voted = true;
+        if (!data.ignored) {
+          $(document).trigger("vote", $.extend(data, {
+            url: url
+          }))
+        }
+        self.$form.filter(function() {
+          return !$form.is(this)
+        }).remove()
+      },
+      error: function() {
+        var msg = gettext("There was an error submitting your vote.");
+        self.showMessage(msg, $btn);
+        $btns.removeAttr("disabled");
+        $form.removeClass("busy")
+      }
+    })
+  }
+  $(this).blur();
+  e.preventDefault();
+  return false
+}

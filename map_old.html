@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Orissa State Information</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("div").hide(0);
+                $("g").mouseenter(function(){
+                    $(this).children().eq(0).addClass("highlightPath");
+                    // $(this).children().eq(1).css("font-size","14px");
+                    $(this).children().eq(2).css("font-size", "24px");
+                    var data=$(this).text();
+                    $("div").show(0);
+                    $("div").text(data);
+                    
+                });
+                
+                $("g").mouseleave(function(){
+                    $(this).children().eq(0).removeClass("highlightPath");
+                    $(this).children().eq(2).css("font-size", "16px");
+                    $("div").hide(0);
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <form style="display : box; position: static; width: 1650; height: 410 ; background-color: #3CB371; border: solid midnightblue 2px " method="get"  >
+            <table>
+                <tr>    <td colspan="2" id="dt_name">Choose a district</td>   </tr>
+                
+                <article id="dist_selected">
+                    <tr>    
+                        <td id="edu">    Education   </td>   
+                        <td id="opt1">
+                            <table>
+                                <tr>    <td>    Literacy ratio  </td>   
+                                    <td id="ar1">    
+                                        <select name="area1">
+                                            <option>Urban</option>
+                                            <option>Rural</option>
+                                            <option>Total</option>
+                                        </select>     
+                                    </td>
+                                </tr>
+                                
+                                <tr> 
+                                    <td>    Schooling percentage</td>   
+                                    <td id="ar1">    
+                                        <select name="area1">
+                                            <option>Urban</option>
+                                            <option>Rural</option>
+                                            <option>Total</option>
+                                        </select>     
+                                    </td>
+                                </tr>
+                            </table>
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>    <td id="hel">    Health      </td>   </tr>
+                </article>
+            </table>
+        </form>
+        <div style="width:120px; height:450px; fill:#00F48f; display: inline; border: solid red; position: initial; color: black;">
+    
+        </div>
+        <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 960 560" style="enable-background:new 0 0 960 560; display: inline; z-index: 1;" xml:space="preserve">
+
+            <style type="text/css">
+                    .st13{fill : #FF6347;stroke:#FFFFFF;stroke-miterlimit:10;}
+                    .st14{font-family:'ArialMT';}
+                    .st15{font-size:16px;}
+                    .highlightPath{position: static; width: 750%; height: 550%; fill:  	#008000;}
+                    form{border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; }
+            </style>
+                
+        
+            <g>
+                <path class="st13" d="M846.3,86.3c-0.5,0.7-1.5,1.3-2.4,1.5c-6.4,2.2-12.7,5.6-19.2,6.5c-23.8,2.8-41.1,15-54.7,32.9
+                    c-1,1.3-2.1,2.8-3.1,4.2c-2.6,3.8-5.1,7.7-7.4,11.9l-1.5,0.2c-0.2,0-0.3,0-0.6,0.1c-5.6,0.8-8.8,5-11.2,10l-1.7,0.2
+                    c-2.7-1.9-5.4-3.9-7.2-6.9c-1.9-1.7-3.8-2.1-5.8-2c-0.1,0-0.2,0-0.3,0c-0.2,0-0.3,0-0.4,0h-0.1c-0.2,0-0.6,0.1-0.8,0.1
+                    c-1.9,0.3-3.8,0.9-5.6,1.2c-0.2,0-0.5,0.1-0.8,0.1h-0.1c-0.2,0-0.4,0-0.6,0.1c-1.5,0.1-3-0.1-4.5-0.8c-1.2,0-2.3,0-3.4-0.2
+                    c-1.2-0.2-2.3-0.4-3.4-0.8c-0.3-0.1-0.5-0.1-0.8-0.3c-0.5-0.1-1-0.4-1.6-0.6c-1.4-0.6-2.7-1.2-4-2.1c-0.4,0-0.8-0.1-1.1-0.1
+                    c-0.1,0-0.2,0-0.3-0.1l0,0c-1-0.4-2.2-0.5-3.2-0.8s-2.1-0.6-3-1.2l0,0c0,0,0,0-0.1-0.1s-0.3-0.3-0.3-0.3c0-0.1-0.1-0.2-0.1-0.3
+                    s0-0.2-0.1-0.3v-0.1c-0.2-0.4-0.4-0.9-0.6-1.3c-0.1-0.2-0.1-0.3-0.2-0.4c-0.1-0.1-0.1-0.3-0.2-0.4l-0.1-1
+                    c0.2-0.9,0.5-1.7,0.9-2.5l0,0c0.4,0.2,0.8,0.3,1.2,0.3c0.2,0,0.2,0,0.3,0h0.1c0.1,0,0.2,0,0.3,0c4.6-0.5,7.2-4.8,10.7-7.1
+                    c1.8-1.5,3.7-2.5,5.5-4c0.6-0.7,1.1-1.5,1.5-2.4c1.4-3.7,4.6-5.5,6.6-8.5c0.6-1,1.1-1.9,1.6-2.9l0.1-0.1c2.5-1.9,5-3.7,7.3-6
+                    c2.1,0.1,4.1-0.4,6.1-1c0.9-0.3,1.7-0.6,2.6-0.9c8.2-2.1,16.2-3.4,24.5-3.9c1.7,0.3,3.2,0.4,4.6,0.3c1.7,0,3.3-0.3,4.8-1.7
+                    c0.7-0.5,1.3-1,2-1.5c1.8-1.5,1.8-4,2.4-6.1c0.6-1.9,1.6-3.6,2.8-4.9c1.9-0.1,2.9-1.5,3.9-3.1c1.6-1.4,3-3.4,4.8-4.4
+                    c0.2,0,0.5,0,0.8,0.1c2.3-0.5,4-1.6,3.8-3.4c-0.1-0.7-0.5-1.5-1.2-2.3l0,0c-0.1-0.1-0.1-0.1-0.2-0.2c0-0.1-0.1-0.2-0.1-0.3
+                    c-0.1-0.3-0.3-0.4-0.6-0.7c-0.1-0.1-0.1-0.1-0.2-0.2c-0.1-0.2-0.2-0.4-0.3-0.4c-0.7-1.2-1.2-2.4-1.4-3.6c0-0.4-0.1-0.7-0.1-1.1
+                    c-0.1-1.4,0.1-2.8,0.6-4.2c4.9-3.2,8-4.9,13,2.4c5.7,8.1,16.7,9.4,26,8.5c1.2-0.1,2.3-0.2,3.3,0c0,0,0,0,0.1,0
+                    c7.7,1.3,7.5,10.9,12.5,14.9C846.9,84.9,846.8,85.6,846.3,86.3z"/>
+                <text transform="matrix(0.866 -0.5 0.5 0.866 725.3005 138.7232)" class="st14 st15">Baleshwar</text>
+                <circle cx="794.9" cy="91" r="3"/>
+            </g>
+        </svg>
+    </body>
+</html>
